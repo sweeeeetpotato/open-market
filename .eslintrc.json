@@ -11,9 +11,9 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:prettier/recommended",
     "plugin:react/recommended",
-    "standard"
+    "standard",
+    "plugin:prettier/recommended"
   ],
   "overrides": [],
   "parserOptions": {
@@ -30,6 +30,14 @@
     "react"
   ],
   "rules": {
+    // Delete `␍` eslint 에러 발생
+    // prettier 2.0이상 부터 endOfLine 기본 옵션이 'auto' 에서 'lf' 로 변경되어서 발생하는 에러. 아래와 같이 설정해주면 해결됨.
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     // 들여쓰기 2칸만 허용
     "indent": [
       "error",
