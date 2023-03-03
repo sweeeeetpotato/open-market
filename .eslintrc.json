@@ -26,9 +26,7 @@
     // parser의 export 형태를 설정, react는 module 기반의 import, export 사용
     "sourceType": "module"
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
     // Delete `␍` eslint 에러 발생
     // prettier 2.0이상 부터 endOfLine 기본 옵션이 'auto' 에서 'lf' 로 변경되어서 발생하는 에러. 아래와 같이 설정해주면 해결됨.
@@ -39,10 +37,7 @@
       }
     ],
     // 들여쓰기 2칸만 허용
-    "indent": [
-      "error",
-      2
-    ],
+    "indent": ["error", 2],
     // var 키워드 사용 불가능
     "no-var": "error",
     // asynn 함수 내부에 await 키워드가 없으면 오류 발생
