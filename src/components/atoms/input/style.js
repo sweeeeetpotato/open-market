@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 import palette from "../../../style/globalColor";
+import deleteIcon from "../../../assets/icon-delete.svg";
 
 export const Input = styled.input`
   width: 100%;
   height: 54px;
-  padding: 0;
+  padding: 0 16px;
   border: 1px solid ${palette.gray};
   border-radius: 5px;
   box-sizing: border-box;
@@ -43,10 +44,26 @@ export const OrderInput = styled(Input)`
   border-radius: 0px;
 `;
 
-export const SearchInput = styled(Input)`
-  width: 400px;
-  height: 46px;
-  border: 2px solid ${palette.mainColor};
-  border-radius: 50px;
-  padding-left: 22px;
+export const IconInput = styled(Input)`
+  height: 100%;
+  border: none;
+
+  :hover {
+    border: none;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  /* for webkit browsers */
+  ::-webkit-search-cancel-button {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+    background: url(${deleteIcon}) no-repeat center;
+    background-size: 16px 16px;
+    cursor: pointer;
+  }
 `;

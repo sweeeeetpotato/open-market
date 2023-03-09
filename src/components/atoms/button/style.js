@@ -26,3 +26,9 @@ export const TabButton = styled(Button)`
   border-bottom: 6px solid ${(props) => palette[props.border]};
   box-sizing: border-box;
 `;
+
+export const ImgButton = styled(Button)`
+  margin: auto 0;
+  background-color: transparent;
+  background: url(${(props) => props.img}) no-repeat center;
+`;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, TabButton } from "./style";
+import { Button, TabButton, ImgButton } from "./style";
 
 export function LoginButton({ children, onClick, disabled }) {
   if (disabled) {
@@ -195,4 +195,18 @@ export function NotFoundButton({ children, onClick, whiteStyle }) {
       </Button>
     );
   }
+}
+
+export function ImageButton({ children, onClick, img }) {
+  return (
+    <ImgButton
+      type='button'
+      onClick={onClick}
+      width='28px'
+      height='28px'
+      img={img}
+    >
+      {children}
+    </ImgButton>
+  );
 }
