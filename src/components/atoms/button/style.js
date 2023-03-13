@@ -14,7 +14,22 @@ export const Button = styled.button`
     props.borderColor &&
     css`
       border: 1px solid ${palette[props.borderColor]};
+      box-sizing: border-box;
     `}
+`;
+
+export const LoginTabButton = styled(Button)`
+  position: relative;
+  height: 80px;
+  padding: 20px 0 38px;
+  color: ${palette.mainTextColor};
+  font-weight: 500;
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid ${palette.gray};
+  border-bottom: none;
+  box-sizing: border-box;
 `;
 
 export const TabButton = styled(Button)`
@@ -28,6 +43,8 @@ export const TabButton = styled(Button)`
 `;
 
 export const ImgButton = styled(Button)`
+  width: ${(props) => props.width || "28px"};
+  height: ${(props) => props.height || "28px"};
   margin: auto 0;
   background-color: transparent;
   background: url(${(props) => props.img}) no-repeat center;

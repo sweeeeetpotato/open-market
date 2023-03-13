@@ -1,35 +1,69 @@
 import React from "react";
-import { Button, TabButton, ImgButton } from "./style";
+import { Button, LoginTabButton, TabButton, ImgButton } from "./style";
 
-export function LoginButton({ children, onClick, disabled }) {
+export function LoginButton({ children, onClick }) {
+  return (
+    <Button type='button' onClick={onClick}>
+      {children}
+    </Button>
+  );
+}
+
+export function LoginTypeButton({ children, onClick, disabled, zIndex }) {
   if (disabled) {
     return (
-      <Button type='button' onClick={onClick} backColor='gray'>
+      <LoginTabButton
+        type='button'
+        onClick={onClick}
+        backColor='lightGray'
+        zIndex={zIndex}
+      >
+        {children}
+      </LoginTabButton>
+    );
+  } else {
+    return (
+      <LoginTabButton
+        type='button'
+        onClick={onClick}
+        backColor='white'
+        zIndex={zIndex}
+      >
+        {children}
+      </LoginTabButton>
+    );
+  }
+}
+
+export function SignUpButton({ children, onClick, disabled }) {
+  if (disabled) {
+    return (
+      <Button
+        type='button'
+        onClick={onClick}
+        width='122px'
+        height='54px'
+        font='16px'
+        weight='500'
+        backColor='gray'
+      >
         {children}
       </Button>
     );
   } else {
     return (
-      <Button type='button' onClick={onClick}>
+      <Button
+        type='button'
+        onClick={onClick}
+        width='122px'
+        height='54px'
+        font='16px'
+        weight='500'
+      >
         {children}
       </Button>
     );
   }
-}
-
-export function SignUpButton({ children, onClick }) {
-  return (
-    <Button
-      type='button'
-      onClick={onClick}
-      width='122px'
-      height='54px'
-      font='16px'
-      weight='500'
-    >
-      {children}
-    </Button>
-  );
 }
 
 export function PurchaseButton({ children, onClick }) {
@@ -197,14 +231,14 @@ export function NotFoundButton({ children, onClick, whiteStyle }) {
   }
 }
 
-export function ImageButton({ children, onClick, img }) {
+export function ImageButton({ children, onClick, img, width, height }) {
   return (
     <ImgButton
       type='button'
       onClick={onClick}
-      width='28px'
-      height='28px'
       img={img}
+      width={width}
+      height={height}
     >
       {children}
     </ImgButton>
