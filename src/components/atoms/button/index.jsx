@@ -9,30 +9,8 @@ export function LoginButton({ children, onClick }) {
   );
 }
 
-export function LoginTypeButton({ children, onClick, disabled, zIndex }) {
-  if (disabled) {
-    return (
-      <LoginTabButton
-        type='button'
-        onClick={onClick}
-        backColor='lightGray'
-        zIndex={zIndex}
-      >
-        {children}
-      </LoginTabButton>
-    );
-  } else {
-    return (
-      <LoginTabButton
-        type='button'
-        onClick={onClick}
-        backColor='white'
-        zIndex={zIndex}
-      >
-        {children}
-      </LoginTabButton>
-    );
-  }
+export function LoginTypeButton({ children }) {
+  return <LoginTabButton type='button'>{children}</LoginTabButton>;
 }
 
 export function SignUpButton({ children, onClick, disabled }) {

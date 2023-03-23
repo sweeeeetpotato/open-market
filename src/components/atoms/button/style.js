@@ -19,16 +19,13 @@ export const Button = styled.button`
 `;
 
 export const LoginTabButton = styled(Button)`
-  position: relative;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   padding: 20px 0 38px;
   color: ${palette.mainTextColor};
   font-weight: 500;
-  border-radius: 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border: 1px solid ${palette.gray};
-  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background-color: transparent;
   box-sizing: border-box;
 `;
 
